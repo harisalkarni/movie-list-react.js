@@ -50,3 +50,43 @@ section{
 .searchbox:focus {
   box-shadow: 0 0 8px 3px #4484C4;
 }
+
+/*design des cards des films après recherche*/
+
+.results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0px -15px;
+}
+
+.result{
+  flex: 0 0 24%;
+  border-radius: 6px;
+}
+
+img:hover{
+  border: 2px solid white;
+}
+img {
+  width:300px;
+  height:445px;
+}
+
+
+.result h3 {
+  color: #fff;
+
+   font-size: 20px;
+   font-weight: 600;
+   padding: 10px;
+   margin-bottom: 20px;
+   flex: 1 1 100%;
+   transition: .4s ease-out;
+   
+}
+.result:hover h3 {
+  background: #fff;
+  color: #223343;
+  border-radius: 4px;
+}
