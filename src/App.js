@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Search from './components/Search';
+import axios from 'axios';
 
 
 function App()
@@ -10,25 +11,42 @@ function App()
     selected: {}
   });
   const apiUrl = "http://www.omdbapi.com/?i=tt3896198&apikey=72ff8aa9";
-  const handleInput = (e) =>
+
+  const search = (e) =>
   {
-    let s = e.target.value;
-    setState(prevState =>
+    if (e.key === "Enter")
     {
-      return { ...prevState, s: s }
-    })
-    console.log(state.s);
+      axios(apiUrl + "&s=" + state.s).then((data) =>
+      {
+        let results = data.Search;
+
+        setState(prevState) => {
+    return { ...prevState, results: results }
   }
-  return (
-    <div className="App">
-      <header>
-        <h1>Movie database</h1>
-      </header>
-      <main>
-        <Search handleInput={handleInput}/>
-      </main>
-    </div>
-  );
+});
+    }
+  }
+
+
+const handleInput = (e) =>
+{
+  let s = e.target.value;
+  setState(prevState =>
+  {
+    return { ...prevState, s: s }
+  })
+  console.log(state.s);
+}
+return (
+  <div className="App">
+    <header>
+      <h1>Movie database</h1>
+    </header>
+    <main>
+      <Search handleInput={handleInput} search={search} />
+    </main>
+  </div>
+);
 }
 
 export default App;
