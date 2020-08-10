@@ -121,14 +121,15 @@ img {
   font-size:20px;
 }
 
-.content .rating{
-  margin-bottom: 30px;
-}
 
 .plot{
   display: flex;
   flex-wrap: wrap;
-  margin: 0px -15px 30px;
+  margin: 0px -15px 15px;
+}
+
+#rating{
+  margin: 0 0 10px;
 }
 
 .plot img{
