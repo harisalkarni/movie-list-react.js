@@ -24,11 +24,11 @@ function App()
       axios(apiUrl + "&s=" + state.s).then(({ data }) =>
       {
         let results = data.Search;
-        console.log(data);
+        //console.log(data);
         setState(prevState =>
         {
           return { ...prevState, results: results }
-        })
+        });
       });
     }
   }
@@ -45,12 +45,12 @@ function App()
   }
 
   //Variable pour la popup quand on clique sur l'image du film
-  const openPopup = id =>
+  let openPopup = id =>
   {
     axios(apiUrl + "&i=" + id).then(({ data }) =>
     {
       let result = data;
-      console.log(result);
+      //console.log(result);
       setState(prevState =>
       {
         return { ...prevState, selected: result }
@@ -77,7 +77,7 @@ function App()
         <Search handleInput={handleInput} search={search} />
         <Results results={state.results} openPopup={openPopup} />
 
-        {(typeof state.selected.Title != "undefined") ? <Popup selected={state.selected} closePopup={closePopup} /> :false}
+        {(typeof state.selected.Title != "undefined") ? <Popup selected={state.selected} closePopup={closePopup} /> : false}
 
       </main>
     </div>

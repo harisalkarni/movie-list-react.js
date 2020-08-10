@@ -100,3 +100,67 @@ img {
   background: linear-gradient(95deg,blue,purple);
   overflow-y: scroll;
 }
+
+.popup .content{
+  display: block;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 25px;
+  color: #fff;
+
+}
+
+.content h2 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.content h2 span {
+  font-weight: 300;
+  font-size:20px;
+}
+
+.content .rating{
+  margin-bottom: 30px;
+}
+
+.plot{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px -15px 30px;
+}
+
+.plot img{
+  flex: 1 1 50%;
+  max-width: 300px;
+  /*padding: 0px 15px;*/
+}
+.plot img:hover{
+  border: 2px solid white;
+  padding: 0 !important;
+}
+
+.plot p {
+  flex: 1 1 50%;
+  padding: 15px;
+}
+
+.close{
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: 700;
+  background: #4484C4;
+  color: #fff;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+  transition: 0.4s ease-out;
+}
+
+.close:hover{
+  background: #223343;
+}
