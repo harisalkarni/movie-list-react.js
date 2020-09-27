@@ -1,38 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap');
-*{
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap");
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
-  font-family: 'nunito', sans-serif;
-  background: linear-gradient(95deg,blue,purple); 
+body {
+  font-family: "nunito", sans-serif;
+  background: linear-gradient(95deg, blue, purple);
   /*opacity: .5;*/
 }
 
-header{
+header {
   padding: 50px 15px 0px;
 }
 
-header h1{
-  color:#FFF;
+header h1 {
+  color: #fff;
   font-size: 48px;
   font-weight: 500;
   text-align: center;
 }
 
-main{
+main {
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
 }
 
-section{
+section {
   padding: 15px;
 }
 
-.searchbox{
+.searchbox {
   display: block;
   width: 100%;
   padding: 15px;
@@ -41,14 +41,14 @@ section{
   background: none;
   background-color: #eee;
   border-radius: 8px;
-  color:#53565A;
+  color: #53565a;
   font-size: 20px;
   font-weight: 300;
   transition: 0.4s ease-out;
 }
 
 .searchbox:focus {
-  box-shadow: 0 0 8px 3px #4484C4;
+  box-shadow: 0 0 8px 3px #4484c4;
 }
 
 /*design des cards des films après recherche*/
@@ -56,34 +56,34 @@ section{
 .results {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 0px -15px;
+  justify-content: space-around;
 }
 
-.result{
-  flex: 0 0 24%;
+.result {
   border-radius: 6px;
+  width: 33%;
+  padding: 10px;
+  flex: initial;
 }
 
-img:hover{
+img:hover {
   border: 2px solid white;
 }
 img {
-  width:300px;
-  height:445px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
-
 
 .result h3 {
   color: #fff;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-   font-size: 20px;
-   font-weight: 600;
-   padding: 10px;
-   margin-bottom: 20px;
-   flex: 1 1 100%;
-   transition: .4s ease-out;
-   
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px;
+  margin-bottom: 20px;
+  flex: 1 1 100%;
+  transition: 0.4s ease-out;
 }
 .result:hover h3 {
   background: #fff;
@@ -91,24 +91,23 @@ img {
   border-radius: 4px;
 }
 
-.popup{
+.popup {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(95deg,blue,purple);
+  background: linear-gradient(95deg, blue, purple);
   overflow-y: scroll;
 }
 
-.popup .content{
+.popup .content {
   display: block;
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
   padding: 25px;
   color: #fff;
-
 }
 
 .content h2 {
@@ -118,26 +117,25 @@ img {
 
 .content h2 span {
   font-weight: 300;
-  font-size:20px;
+  font-size: 20px;
 }
 
-
-.plot{
+.plot {
   display: flex;
   flex-wrap: wrap;
   margin: 0px -15px 15px;
 }
 
-#rating{
+#rating {
   margin: 0 0 10px;
 }
 
-.plot img{
+.plot img {
   flex: 1 1 50%;
   max-width: 300px;
   /*padding: 0px 15px;*/
 }
-.plot img:hover{
+.plot img:hover {
   border: 2px solid white;
   padding: 0 !important;
 }
@@ -147,12 +145,12 @@ img {
   padding: 15px;
 }
 
-.close{
+.close {
   display: inline-block;
   padding: 15px 30px;
   font-size: 18px;
   font-weight: 700;
-  background: #4484C4;
+  background: #4484c4;
   color: #fff;
   border-radius: 8px;
   border: none;
@@ -162,6 +160,37 @@ img {
   transition: 0.4s ease-out;
 }
 
-.close:hover{
+.close:hover {
   background: #223343;
+}
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) {
+  .result {
+    padding: 5px;
+  }
+
+  .result h3 {
+    font-size: 50%;
+    font-weight: 600;
+    padding: 3px;
+    margin: 0;
+  }
+}
+
+@media only screen and (min-device-width: 350px) and (max-device-width: 667px) {
+  header h1 {
+    color: #fff;
+    font-size: 30px;
+  }
+
+  .result {
+    padding: 5px;
+  }
+
+  .result h3 {
+    font-size: 50%;
+    font-weight: 600;
+    padding: 3px;
+    margin: 0;
+  }
 }
