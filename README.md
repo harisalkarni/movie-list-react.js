@@ -1,68 +1,48 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Movie Database
 
-## Available Scripts
+## **<a href="https://doums10.github.io/moviedb/" target="_blank">Click here to demo</a>**
 
-In the project directory, you can run:
+> A robustly featured and continuously developed React application, utilizing The Movie Database API to display movie data.
 
-### `yarn start`
+![](moviedb.gif)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Features
 
-### `yarn test`
+Browse movies by title, or search. 
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+View detailed movie information like runtimes, ratings, genre, year
 
-### `yarn build`
+---
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Libraries and Technologies
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- Accesses The Movie Database (Omdb) API for movie related data
+- Uses React
+- Uses Axios for data fetching, included in a custom React Hook
+- Uses React Router for routing
+- Styled with Styled Components
+- Uses icons from Styled Icons (FontAwesome)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `yarn eject`
+## Contact
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+> Reach out to me at:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- m27sylla@gmail.com
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+> My portfolio:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- <a href="https://oxydev.fr/portfolio" target="_blank">oxydev.fr/portfolio</a>
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Attribution
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This application uses the OMDB API but is not endorsed or certified by OMDB.
 
-### Code Splitting
+<a href="http://www.omdbapi.com/"><img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Frapidapi.com%2Fblog%2Fdirectory%2Fomdb%2F&psig=AOvVaw13KMqcuXrK2QKFVsy9M2MZ&ust=1601261072317000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNjxgsaoiOwCFQAAAAAdAAAAABAJ" title="OMDB" alt="themoviedb"></a>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+---
