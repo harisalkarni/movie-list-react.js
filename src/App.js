@@ -3,6 +3,8 @@ import Search from './components/Search';
 import Results from './components/Results';
 import axios from 'axios';
 import Popup from './components/Popup';
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import AboutMovie from './Pages/AboutMovie';
 
 
 function App()
@@ -13,7 +15,7 @@ function App()
     selected: {}
   });
 
-  const apiUrl = "http://www.omdbapi.com/?apikey=72ff8aa9";
+  const apiUrl = "http://www.omdbapi.com/?apikey=715289b";
 
 
 
@@ -44,13 +46,12 @@ function App()
     });
   }
 
-  //Variable pour la popup quand on clique sur l'image du film
+  
   let openPopup = id =>
   {
     axios(apiUrl + "&i=" + id).then(({ data }) =>
     {
       let result = data;
-      //console.log(result);
       setState(prevState =>
       {
         return { ...prevState, selected: result }
@@ -58,7 +59,6 @@ function App()
     });
   }
 
-  //fin de la variable
 
   const closePopup = () =>
   {
@@ -69,18 +69,22 @@ function App()
   }
 
   return (
-    <div className="App">
-      <header>
-        <h1>Movie database</h1>
-      </header>
-      <main>
-        <Search handleInput={handleInput} search={search} />
-        <Results results={state.results} openPopup={openPopup} />
+    <Router>
+      <div className="App">
+        <header>
+          <h1>Movie List</h1>
+        </header>
+        <main>
+          <Search handleInput={handleInput} search={search} />
+          <Results results={state.results} openPopup={openPopup} />
 
-        {(typeof state.selected.Title != "undefined") ? <Popup selected={state.selected} closePopup={closePopup} /> : false}
+          {(typeof state.selected.Title != "undefined") ? <Popup selected={state.selected} closePopup={closePopup} /> : false}
+          
 
-      </main>
-    </div>
+        </main>
+      </div>
+    </Router>
+    
   );
 }
 

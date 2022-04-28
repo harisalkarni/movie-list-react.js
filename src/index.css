@@ -7,10 +7,13 @@
 
 body {
   font-family: "nunito", sans-serif;
-  background: linear-gradient(95deg, blue, purple);
+  background-color: rgb(28, 28, 28);
+  overflow: scroll;
   /*opacity: .5;*/
 }
-
+body::-webkit-scrollbar { 
+  display: none;  
+}
 header {
   padding: 50px 15px 0px;
 }
@@ -57,24 +60,28 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  overflow: hidden;
 }
 
 .result {
   border-radius: 6px;
-  width: 33%;
+  width: 25%;
   padding: 10px;
   flex: initial;
+  overflow: hidden;
+
 }
 
-img:hover {
-  border: 2px solid white;
-}
 img {
   width: 100%;
   height: auto;
   border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s;
 }
-
+img:hover {
+  border: 2px solid white;
+}
 .result h3 {
   color: #fff;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
@@ -83,30 +90,36 @@ img {
   padding: 10px;
   margin-bottom: 20px;
   flex: 1 1 100%;
-  transition: 0.4s ease-out;
+  transition: 0.5s;
+  cursor: pointer;
 }
 .result:hover h3 {
-  background: #fff;
-  color: #223343;
-  border-radius: 4px;
+  font-size:22px;
+    font-size-adjust: 20px;
 }
 
 .popup {
   position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(95deg, blue, purple);
+  background-color: rgba(28, 28, 28);
   overflow-y: scroll;
 }
-
+.popup::-webkit-scrollbar { 
+  display: none;  
+}
 .popup .content {
-  display: block;
+  display: flex;
+  justify-content: space-between;
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
-  padding: 25px;
+  padding: 15px;
   color: #fff;
 }
 
@@ -120,12 +133,16 @@ img {
   font-size: 20px;
 }
 
+
 .plot {
   display: flex;
   flex-wrap: wrap;
   margin: 0px -15px 15px;
 }
-
+.plot2{
+  max-width: 50%;
+  margin: auto;
+}
 #rating {
   margin: 0 0 10px;
 }
@@ -146,8 +163,11 @@ img {
 }
 
 .close {
-  display: inline-block;
-  padding: 15px 30px;
+  display: block;
+  position: absolute;
+  justify-content: flex-end;
+  left: 90%;
+  padding: 5px 10px;
   font-size: 18px;
   font-weight: 700;
   background: #4484c4;
