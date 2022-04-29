@@ -4,7 +4,7 @@ import Results from './components/Results';
 import axios from 'axios';
 import Popup from './components/Popup';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
-import AboutMovie from './Pages/AboutMovie';
+
 
 
 function App()
