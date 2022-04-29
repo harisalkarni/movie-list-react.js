@@ -2,7 +2,6 @@
   "name": "moviedb",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://doums10.github.io/moviedb/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -36,8 +35,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "jest": "^28.0.2"
   }
 }
